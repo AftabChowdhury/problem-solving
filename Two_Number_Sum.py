@@ -13,6 +13,7 @@
 '''
 
 
+# O(n^2) time | O(1) space
 def two_number_sum_bfm(array, targetSum):
     result = []
     for i in range(len(array) - 1):
@@ -24,6 +25,7 @@ def two_number_sum_bfm(array, targetSum):
     return result
 
 
+# O(nlog(n)) | O(1) space
 def two_number_sum_binary_search(array, targetSum):
     array.sort()
     result = []
@@ -45,6 +47,7 @@ def two_number_sum_binary_search(array, targetSum):
     return result
 
 
+# O(n) time | O(n) space
 def two_number_sum_hash_map(array, targetSum):
     dict_numbers = {}
     for first_num in array:
