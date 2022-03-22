@@ -9,4 +9,26 @@ def two_number_sum_bfm(array, targetSum):
     return result
 
 
+def two_number_sum_binary_search(array, targetSum):
+    array.sort()
+    result = []
+    for i in range(0, len(array) - 1):
+        first_num = array[i]
+        second_num = targetSum - first_num
+        low = i + 1
+        high = len(array) - 1
+        while low <= high:
+            mid = int((low + high) / 2)
+            if second_num == array[mid]:
+                result.append(first_num)
+                result.append(second_num)
+                return result
+            elif second_num < array[mid]:
+                high = mid - 1
+            elif second_num > array[mid]:
+                low = mid + 1
+    return result
+
+
 print(two_number_sum_bfm([3, 5, -4, 8, 11, 1, -1, 6], 10))
+print(two_number_sum_binary_search([3, 5, -4, 8, 11, 1, -1, 6], 10))
