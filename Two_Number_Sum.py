@@ -30,5 +30,17 @@ def two_number_sum_binary_search(array, targetSum):
     return result
 
 
+def two_number_sum_hash_map(array, targetSum):
+    dict_numbers = {}
+    for first_num in array:
+        second_num = targetSum - first_num
+        if second_num in dict_numbers:
+            return [first_num, second_num]
+        else:
+            dict_numbers[first_num] = True
+    return []
+
+
 print(two_number_sum_bfm([3, 5, -4, 8, 11, 1, -1, 6], 10))
 print(two_number_sum_binary_search([3, 5, -4, 8, 11, 1, -1, 6], 10))
+print(two_number_sum_hash_map([3, 5, -4, 8, 11, 1, -1, 6], 10))
