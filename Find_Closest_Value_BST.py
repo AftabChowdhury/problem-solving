@@ -1,3 +1,14 @@
+"""
+
+  Write a function that takes in a Binary Search Tree (BST) and a target integer
+  value and returns the closest value to that target value contained in the BST.
+
+  You can assume that there will only be one closest value.
+"""
+
+
+# Average: O(log(n)) time | O(1) space
+# Worst: O(n) time | O(1) space
 def find_closest_value_In_bst(tree, target):
     return get_closest_value(tree, target, tree.value)
 
