@@ -20,18 +20,19 @@ def get_node_depth(node, depth):
     depth += get_node_depth(node.left, depth + 1) + get_node_depth(node.right, depth + 1)
     return depth
 
+
 def node_depths_solution_2(root):
     sum_depths = 0
-	queue = [{"node": root, "depth": 0}]
-	while len (queue) > 0:
-		node_info = queue.pop(0)
-		node, depth = node_info["node"], node_info["depth"]
-		if node is None:
-			continue
-		sum_depths += depth
-		queue.append({"node": node.left, "depth": depth + 1})
-		queue.append({"node": node.right, "depth": depth + 1})
-	return sum_depths
+    queue = [{"node": root, "depth": 0}]
+    while len(queue) > 0:
+        node_info = queue.pop(0)
+        node, depth = node_info["node"], node_info["depth"]
+        if node is None:
+            continue
+        sum_depths += depth
+        queue.append({"node": node.left, "depth": depth + 1})
+        queue.append({"node": node.right, "depth": depth + 1})
+    return sum_depths
 
 
 # This is the class of the input binary tree.
