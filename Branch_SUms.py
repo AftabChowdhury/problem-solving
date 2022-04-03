@@ -15,7 +15,7 @@ class BinaryTree:
 
 def branchSums(root):
     sum_list = []
-    return get_branch_sum(root, sum, sum_list)
+    return get_branch_sum(root, 0, sum_list)
 
 
 def get_branch_sum(node, sum, sum_list):
