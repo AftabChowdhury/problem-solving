@@ -13,7 +13,7 @@ class BinaryTree:
         self.right = None
 
 
-def branchSums(root):
+def branch_sums(root):
     sum_list = []
     return get_branch_sum(root, 0, sum_list)
 
