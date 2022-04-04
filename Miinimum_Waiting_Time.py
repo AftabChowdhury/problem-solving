@@ -12,6 +12,7 @@
 """
 
 
+# O(nlogn) time | O(n) space - where n is the number of queries
 def minimum_waiting_time(queries):
     queries.sort()
     sum = 0
@@ -25,4 +26,17 @@ def minimum_waiting_time(queries):
     return sum
 
 
+# O(nlogn) time | O(1) space - where n is the number of queries
+def minimum_waiting_time_solution2(queries):
+    queries.sort()
+    total_waiting_time = 0
+    for i in range(len(queries) - 1):
+        waiting_time = queries[i]
+        remaining_query = len(queries) - (i+1)
+        total_waiting_time += waiting_time * remaining_query
+    return total_waiting_time
+
+
 print(minimum_waiting_time([3, 2, 1, 2, 6]))
+
+print(minimum_waiting_time_solution2([3, 2, 1, 2, 6]))
