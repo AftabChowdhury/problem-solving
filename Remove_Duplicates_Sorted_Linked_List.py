@@ -23,8 +23,9 @@ def remove_duplicates_from_linked_list(linkedList):
         return linkedList
     current_node = linkedList
     while current_node.next:
-        if current_node.value == current_node.next.value:
-            current_node.next = current_node.next.next
+        next_node = current_node.next
+        if current_node.value == next_node.value:
+            current_node.next = next_node.next
         else:
             current_node = current_node.next
     return linkedList
