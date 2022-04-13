@@ -1,3 +1,4 @@
+# O(n) time | O(n) space
 def caesar_cipher_encryptor(string, key):
     # Write your code here.
     encrypted_array = []
