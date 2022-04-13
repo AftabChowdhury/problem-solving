@@ -1,3 +1,4 @@
+# O(n) time | O(1) space
 def is_palindrome(string):
     start = 0
     last = len(string) - 1
