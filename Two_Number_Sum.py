@@ -37,9 +37,7 @@ def two_number_sum_binary_search(array, targetSum):
         while low <= high:
             mid = int((low + high) / 2)
             if second_num == array[mid]:
-                result.append(first_num)
-                result.append(second_num)
-                return result
+                return [first_num, second_num]
             elif second_num < array[mid]:
                 high = mid - 1
             elif second_num > array[mid]:
